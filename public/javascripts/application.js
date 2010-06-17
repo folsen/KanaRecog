@@ -1,4 +1,4 @@
-var words,current_word,i,time1, time2;
+var words, current_word, i, time1, time2;
 
 function startGame(kind) {
   i=0;
@@ -56,7 +56,7 @@ function score() {
     $('#animation').fadeIn(200);
     $('#animation').fadeOut(1200);
   }
-  i++;
+  i = i + 1;
   if(i>9){
     $('#finalscore').html($('#points').html());
     $('#game').hide();
