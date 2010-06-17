@@ -34,7 +34,6 @@ function startGame(kind) {
     });
     
     $('#romaji').keyup(function(k){
-      console.log(k);
       if(k.keyCode == 13 || $('#romaji').val().length == 0) {
         $('#romaji').css('background-color','#FFFFFF');
       } else {
