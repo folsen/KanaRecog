@@ -1,5 +1,23 @@
 var words, current_word, i, time1, time2;
 
+$(function(){
+  $('#kanaform').submit(function(){
+    score();
+    return false;
+  });
+  $('#romaji').keyup(function(k){
+    if(k.keyCode == 13 || $('#romaji').val().length == 0) {
+      $('#romaji').css('background-color','#FFFFFF');
+    } else {
+      if($('#romaji').val() == current_word.romaji.substr(0,$('#romaji').val().length)) {
+        $('#romaji').css('background-color', '#BEF49E');
+      } else {
+        $('#romaji').css('background-color', '#ED743B');
+      }
+    }
+  });
+});
+
 function startGame(kind) {
   i=0;
   $('#intro').hide();
@@ -27,23 +45,6 @@ function startGame(kind) {
       $('#kana').html(current_word.kana);
       time1 = new Date().getTime();
     }, 5000);
-    
-    $('#kanaform').submit(function(){
-      score();
-      return false;
-    });
-    
-    $('#romaji').keyup(function(k){
-      if(k.keyCode == 13 || $('#romaji').val().length == 0) {
-        $('#romaji').css('background-color','#FFFFFF');
-      } else {
-        if($('#romaji').val() == current_word.romaji.substr(0,$('#romaji').val().length)) {
-          $('#romaji').css('background-color', '#BEF49E');
-        } else {
-          $('#romaji').css('background-color', '#ED743B');
-        }
-      }
-    });
   });
 }
 
@@ -56,7 +57,7 @@ function score() {
     $('#animation').fadeIn(200);
     $('#animation').fadeOut(1200);
   }
-  i = i + 1;
+  i++;
   if(i>9){
     $('#finalscore').html($('#points').html());
     $('#game').hide();
