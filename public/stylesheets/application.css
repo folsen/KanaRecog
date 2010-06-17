@@ -1,0 +1,101 @@
+body {
+  background-color: #b9c0bf; 
+  color: #333; 
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   16px;
+  line-height: 22px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; }
+
+#content {
+  margin: auto;
+  margin-top: 150px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: 1px solid #333333;
+  background-color: #EEEEEE;
+  width:600px;
+  padding:40px;
+}
+#buttons {
+  background: url('/images/button.gif') repeat-x;
+  width:400px;
+  margin:auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  color: #EEEEEE;
+  font-size:24px;
+  list-style:none;
+  padding:0;
+}
+#buttons li {
+  display:block;
+  float:left;
+  padding:20px;
+  height:52px;
+  padding-top:30px;
+  padding-bottom:0px;
+}
+#buttons li.left {
+  border-right:1px solid #828282;
+}
+#buttons li.middle {
+  border-left:1px solid #2d2d2d;
+  border-right: 1px solid #828282;
+}
+#buttons li.right {
+  border-left:1px solid #2d2d2d;
+}
+#buttons a {
+  color: #EEEEEE;
+  text-decoration:none;
+}
+
+#game {
+  text-align: center;
+  position:relative;
+}
+#kana {
+  font-size: 48px;
+  line-height:80px;
+}
+#romaji {
+  width:300px;
+  font-size:30px;
+}
+#formcontainer {
+  position:relative;
+  left:140px;
+  width:500px;
+  text-align:left;
+  height:50px;
+}
+#kanaform input[type="submit"] {
+  height:45px;
+  position:relative;
+  top:-8px;
+}
+#points {
+  font-size:60px;
+  margin-top:30px;
+}
+#animation {
+  font-size:50px;
+  color: #4D9F4A;
+}
+#finalscore {
+  font-size:20px;
+  font-weight:bold;
+}

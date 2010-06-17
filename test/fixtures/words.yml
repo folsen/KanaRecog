@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  kind: 1
+  kana: MyString
+  romaji: MyString
+
+two:
+  kind: 1
+  kana: MyString
+  romaji: MyString
