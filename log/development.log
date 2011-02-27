@@ -10984,3 +10984,505 @@ Processing WordsController#show (for 127.0.0.1 at 2010-06-17 02:25:57) [GET]
   Parameters: {"id"=>"0"}
   [4;36;1mWord Load (108.0ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."kind" = '0') ORDER BY random() LIMIT 10[0m
 Completed in 125ms (View: 1, DB: 108) | 200 OK [http://localhost/words/0]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 11:59:55) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 17ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:00:21) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:00:45) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:01:01) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:01:13) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateWords (20100616164920)
+Migrating to CreateHighscores (20110227030216)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "highscores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "score" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110227030216')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("highscores")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("words")[0m
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:04:35) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:04:41) [GET]
+  [4;36;1mHighscore Load (0.4ms)[0m   [0;1mSELECT * FROM "highscores" [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#new (for 127.0.0.1 at 2011-02-27 12:04:44) [GET]
+Rendering template within layouts/application
+Rendering highscores/new
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/highscores/new]
+
+
+Processing HighscoresController#create (for 127.0.0.1 at 2011-02-27 12:05:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"raYexvYR6Ppgm0oFfMtowWOeHvo5gNCLQUNmQpChBaI=", "highscore"=>{"name"=>"Fredrik", "score"=>"1032"}}
+  [4;35;1mHighscore Create (0.4ms)[0m   [0mINSERT INTO "highscores" ("name", "created_at", "updated_at", "score") VALUES('Fredrik', '2011-02-27 03:05:08', '2011-02-27 03:05:08', 1032)[0m
+Redirected to http://localhost:3000/highscores/1
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/highscores]
+
+
+Processing HighscoresController#show (for 127.0.0.1 at 2011-02-27 12:05:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHighscore Load (0.1ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering highscores/show
+Completed in 67ms (View: 62, DB: 0) | 200 OK [http://localhost/highscores/1]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:05:12) [GET]
+  [4;35;1mHighscore Load (0.4ms)[0m   [0mSELECT * FROM "highscores" [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:08:55) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.find):
+  app/controllers/highscores_controller.rb:8:in `index'
+
+Rendered rescues/_trace (25.7ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:09:12) [GET]
+  [4;36;1mHighscore Load (0.4ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY created_at LIMIT 2[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#new (for 127.0.0.1 at 2011-02-27 12:09:15) [GET]
+Rendering template within layouts/application
+Rendering highscores/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/highscores/new]
+
+
+Processing HighscoresController#create (for 127.0.0.1 at 2011-02-27 12:09:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"raYexvYR6Ppgm0oFfMtowWOeHvo5gNCLQUNmQpChBaI=", "highscore"=>{"name"=>"Poop", "score"=>"235"}}
+  [4;35;1mHighscore Create (0.4ms)[0m   [0mINSERT INTO "highscores" ("name", "created_at", "updated_at", "score") VALUES('Poop', '2011-02-27 03:09:20', '2011-02-27 03:09:20', 235)[0m
+Redirected to http://localhost:3000/highscores/2
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/highscores]
+
+
+Processing HighscoresController#show (for 127.0.0.1 at 2011-02-27 12:09:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mHighscore Load (0.2ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering highscores/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/highscores/2]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:09:22) [GET]
+  [4;35;1mHighscore Load (0.4ms)[0m   [0mSELECT * FROM "highscores" ORDER BY created_at LIMIT 2[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#new (for 127.0.0.1 at 2011-02-27 12:09:24) [GET]
+Rendering template within layouts/application
+Rendering highscores/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/highscores/new]
+
+
+Processing HighscoresController#create (for 127.0.0.1 at 2011-02-27 12:09:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"raYexvYR6Ppgm0oFfMtowWOeHvo5gNCLQUNmQpChBaI=", "highscore"=>{"name"=>"Emma", "score"=>"2345"}}
+  [4;36;1mHighscore Create (0.4ms)[0m   [0;1mINSERT INTO "highscores" ("name", "created_at", "updated_at", "score") VALUES('Emma', '2011-02-27 03:09:28', '2011-02-27 03:09:28', 2345)[0m
+Redirected to http://localhost:3000/highscores/3
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/highscores]
+
+
+Processing HighscoresController#show (for 127.0.0.1 at 2011-02-27 12:09:28) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mHighscore Load (0.1ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering highscores/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/highscores/3]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:09:30) [GET]
+  [4;36;1mHighscore Load (0.4ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY created_at LIMIT 2[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:09:39) [GET]
+  [4;35;1mHighscore Load (0.4ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score LIMIT 2[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:10:19) [GET]
+  [4;36;1mHighscore Load (0.5ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 2[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:10:25) [GET]
+  [4;35;1mHighscore Load (0.4ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 68ms (View: 9, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:10:34) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;36;1mHighscore Load (0.3ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:10:41) [GET]
+  Parameters: {"name"=>"emma"}
+  [4;35;1mHighscore Load (0.1ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/highscores?name=emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:10:45) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;36;1mHighscore Load (0.1ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:12:46) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;35;1mHighscore Load (0.2ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:12:58) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;36;1mHighscore Load (0.1ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:13:07) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;35;1mHighscore Load (0.2ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:13:34) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;36;1mHighscore Load (0.1ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 66ms (View: 5, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:13:42) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;35;1mHighscore Load (0.1ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:13:50) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;36;1mHighscore Load (0.2ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:14:05) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;35;1mHighscore Load (0.2ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:14:10) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;36;1mHighscore Load (0.2ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:14:25) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;35;1mHighscore Load (0.2ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:14:27) [GET]
+  Parameters: {"name"=>"", "commit"=>"Filter"}
+  [4;36;1mHighscore Load (0.1ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = '') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/highscores?name=&commit=Filter]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:05) [GET]
+  Parameters: {"name"=>"", "commit"=>"Filter"}
+  [4;35;1mHighscore Load (0.7ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/highscores?name=&commit=Filter]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:06) [GET]
+  Parameters: {"name"=>"", "commit"=>"Filter"}
+  [4;36;1mHighscore Load (0.5ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/highscores?name=&commit=Filter]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:09) [GET]
+  Parameters: {"name"=>"Fredrik", "commit"=>"Filter"}
+  [4;35;1mHighscore Load (0.3ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Fredrik') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/highscores?name=Fredrik&commit=Filter]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:11) [GET]
+  Parameters: {"name"=>"", "commit"=>"Filter"}
+  [4;36;1mHighscore Load (0.4ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/highscores?name=&commit=Filter]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:35) [GET]
+  Parameters: {"name"=>"", "commit"=>"Filter"}
+  [4;35;1mHighscore Load (0.5ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/highscores?name=&commit=Filter]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:38) [GET]
+  [4;36;1mHighscore Load (0.5ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:39) [GET]
+  Parameters: {"name"=>""}
+  [4;35;1mHighscore Load (0.5ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/highscores?name=]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:40) [GET]
+  Parameters: {"name"=>""}
+  [4;36;1mHighscore Load (0.9ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 10ms (View: 3, DB: 1) | 200 OK [http://localhost/highscores?name=]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:44) [GET]
+  Parameters: {"name"=>"Emma"}
+  [4;35;1mHighscore Load (0.2ms)[0m   [0mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Emma') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/highscores?name=Emma]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:15:47) [GET]
+  [4;36;1mHighscore Load (0.4ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/highscores]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:20:20) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:22:38) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#show (for 127.0.0.1 at 2011-02-27 12:22:40) [GET]
+  Parameters: {"id"=>"0"}
+  [4;35;1mWord Load (13.4ms)[0m   [0mSELECT * FROM "words" WHERE ("words"."kind" = '0') ORDER BY random() LIMIT 10[0m
+Completed in 31ms (View: 1, DB: 13) | 200 OK [http://localhost/words/0]
+
+
+Processing HighscoresController#create (for 127.0.0.1 at 2011-02-27 12:24:01) [POST]
+  Parameters: {"commit"=>"Create", "highscore"=>{"name"=>"Fredrik", "score"=>"1004"}}
+  [4;36;1mHighscore Create (0.3ms)[0m   [0;1mINSERT INTO "highscores" ("name", "created_at", "updated_at", "score") VALUES('Fredrik', '2011-02-27 03:24:01', '2011-02-27 03:24:01', 1004)[0m
+Redirected to http://localhost:3000/highscores/4
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/highscores]
+
+
+Processing HighscoresController#show (for 127.0.0.1 at 2011-02-27 12:24:01) [GET]
+  Parameters: {"id"=>"4"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create and index):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:25:50) [GET]
+  [4;35;1mHighscore Load (0.5ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/highscores/]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:27:46) [GET]
+  [4;36;1mHighscore Load (0.5ms)[0m   [0;1mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/highscores/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:27:52) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#show (for 127.0.0.1 at 2011-02-27 12:27:58) [GET]
+  Parameters: {"id"=>"0"}
+  [4;35;1mWord Load (12.4ms)[0m   [0mSELECT * FROM "words" WHERE ("words"."kind" = '0') ORDER BY random() LIMIT 10[0m
+Completed in 27ms (View: 1, DB: 12) | 200 OK [http://localhost/words/0]
+
+
+Processing HighscoresController#create (for 127.0.0.1 at 2011-02-27 12:28:34) [POST]
+  Parameters: {"commit"=>"Create", "highscore"=>{"name"=>"Fredrik", "score"=>"1183"}}
+  [4;36;1mHighscore Create (0.6ms)[0m   [0;1mINSERT INTO "highscores" ("name", "created_at", "updated_at", "score") VALUES('Fredrik', '2011-02-27 03:28:34', '2011-02-27 03:28:34', 1183)[0m
+Redirected to http://localhost:3000/highscores
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:28:34) [GET]
+  [4;35;1mHighscore Load (0.6ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/highscores]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:28:40) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:29:00) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#show (for 127.0.0.1 at 2011-02-27 12:29:01) [GET]
+  Parameters: {"id"=>"0"}
+  [4;36;1mWord Load (11.6ms)[0m   [0;1mSELECT * FROM "words" WHERE ("words"."kind" = '0') ORDER BY random() LIMIT 10[0m
+Completed in 27ms (View: 1, DB: 12) | 200 OK [http://localhost/words/0]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:30:17) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WordsController#show (for 127.0.0.1 at 2011-02-27 12:30:19) [GET]
+  Parameters: {"id"=>"0"}
+  [4;35;1mWord Load (13.8ms)[0m   [0mSELECT * FROM "words" WHERE ("words"."kind" = '0') ORDER BY random() LIMIT 10[0m
+Completed in 84ms (View: 1, DB: 14) | 200 OK [http://localhost/words/0]
+
+
+Processing HighscoresController#create (for 127.0.0.1 at 2011-02-27 12:30:53) [POST]
+  Parameters: {"commit"=>"Create", "highscore"=>{"name"=>"Karl", "score"=>"948"}}
+  [4;36;1mHighscore Create (0.4ms)[0m   [0;1mINSERT INTO "highscores" ("name", "created_at", "updated_at", "score") VALUES('Karl', '2011-02-27 03:30:53', '2011-02-27 03:30:53', 948)[0m
+Redirected to http://localhost:3000/highscores
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:30:53) [GET]
+  [4;35;1mHighscore Load (0.5ms)[0m   [0mSELECT * FROM "highscores" ORDER BY score DESC LIMIT 50[0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/highscores]
+
+
+Processing HighscoresController#index (for 127.0.0.1 at 2011-02-27 12:31:06) [GET]
+  Parameters: {"name"=>"Karl"}
+  [4;36;1mHighscore Load (0.2ms)[0m   [0;1mSELECT * FROM "highscores" WHERE ("highscores"."name" = 'Karl') [0m
+Rendering template within layouts/application
+Rendering highscores/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/highscores?name=Karl]
+
+
+Processing WordsController#index (for 127.0.0.1 at 2011-02-27 12:31:09) [GET]
+Rendering template within layouts/application
+Rendering words/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]

@@ -60,6 +60,7 @@ function score() {
   i++;
   if(i>9){
     $('#finalscore').html($('#points').html());
+    $('#highscore_score').val($('#points').html());
     $('#game').hide();
     $('#finished').show();
     $('#points').html('0');

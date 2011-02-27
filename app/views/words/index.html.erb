@@ -1,48 +1,19 @@
-<div id="content">
-  <div id="intro">
-    <h1>Kana Recognition Practice</h1>
-    <div id="info">
-      <p>
-        Welcome to Kana Recognition Practice. This is a game where you get 10 words written in Hiragana, Katakana or a mix of the two, the goal is
-        to type all the ten words correctly in romaji in as short time as possible.
-      </p>
-      <p>
-        The game will show you when you write incorrectly, since romaji is a little ambiguous you will get a chance to correct it without losing all points.
-        If you however submit the word with an error, you will get no points for the word.
-      </p>
-      <p>
-        You are scored based on the time it takes for you to complete each word.
-      </p>
-      <p>
-        Click one of the buttons below to choose what kind of kana you want to play with. Javascript is required to play the game.
-      </p>
-      <ul id="buttons">
-        <li class="left"><a href="javascript:startGame(0)">Hiragana</a></li>
-        <li class="middle"><a href="javascript:startGame(1)">Katakana</a></li>
-        <li class="right"><a href="javascript:startGame(2)">Both</a></li>
-        <br style="clear:both;">
-      </ul>
-    </div>
-  </div>
-  <div id="game" style="display:none;">
-    <div id="kana"></div> 
-    <div id="formcontainer">
-    <form id="kanaform">
-      <input type="text" id="romaji" name="romaji" autocomplete="off"/>
-      <input type="submit" value="Send">
-      <span id="animation"></span>
-    </form>
-    </div>
-    <h1>Points:</h1>
-    <div id="points">0</div>
-  </div>
-  <div id="finished" style="display:none;">
-    <h1>Nicely done!</h1>
+<div id="intro">
+  <h1>Kana Recognition Practice</h1>
+  <div id="info">
     <p>
-      You finished this round with a score of <span id="finalscore"></span>. 
-      I might implement a high-score list in the future, with twitter or facebook auth or something.
-    </p> 
-    <p>Start a new game by clicking below!</p>
+      Welcome to Kana Recognition Practice. This is a game where you get 10 words written in Hiragana, Katakana or a mix of the two, the goal is
+      to type all the ten words correctly in romaji in as short time as possible.
+    </p>
+    <p>
+      The game will show you when you write incorrectly, since romaji is a little ambiguous you will get a chance to correct it without losing all points.
+      If you however submit the word with an error, you will get no points for the word.
+    </p>
+    <p>
+      You are scored based on the time it takes for you to complete each word.
+    </p>
+    <p>
+      Click one of the buttons below to choose what kind of kana you want to play with. Javascript is required to play the game.
     </p>
     <ul id="buttons">
       <li class="left"><a href="javascript:startGame(0)">Hiragana</a></li>
@@ -51,4 +22,39 @@
       <br style="clear:both;">
     </ul>
   </div>
+</div>
+<div id="game" style="display:none;">
+  <div id="kana"></div> 
+  <div id="formcontainer">
+  <form id="kanaform">
+    <input type="text" id="romaji" name="romaji" autocomplete="off"/>
+    <input type="submit" value="Send">
+    <span id="animation"></span>
+  </form>
+  </div>
+  <h1>Points:</h1>
+  <div id="points">0</div>
+</div>
+<div id="finished" style="display:none;">
+  <h1>Nicely done!</h1>
+  <p>
+    You finished this round with a score of <span id="finalscore"></span>. <br />
+    Enter this score into the highscore list:<br />
+  </p>
+  <form action="/highscores" class="new_highscore" id="new_highscore" method="post"> 
+    <p> 
+      <label for="highscore_name">Name</label><br /> 
+      <input id="highscore_name" name="highscore[name]" size="30" type="text" /> 
+    <input id="highscore_score" name="highscore[score]" size="30" type="hidden" /> 
+      <input id="highscore_submit" name="commit" type="submit" value="Create" /> 
+    </p> 
+  </form>
+  <p>Start a new game by clicking below!</p>
+  </p>
+  <ul id="buttons">
+    <li class="left"><a href="javascript:startGame(0)">Hiragana</a></li>
+    <li class="middle"><a href="javascript:startGame(1)">Katakana</a></li>
+    <li class="right"><a href="javascript:startGame(2)">Both</a></li>
+    <br style="clear:both;">
+  </ul>
 </div>
